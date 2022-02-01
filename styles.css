@@ -1,0 +1,182 @@
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+.cls-1 {
+    fill:#69fe55;
+    cursor:pointer;
+}
+
+.cls-2 {
+    fill:#04fefe;
+    cursor:pointer;
+}
+
+.cls-3 {
+    fill:#a8affc;
+    cursor:pointer;
+}
+
+.cls-4 {
+    fill:#0378fe;
+    cursor:pointer;
+}
+
+.cls-5 {
+    fill:#024861;
+    cursor:pointer;
+}
+
+.cls-6 {
+    fill:#c7ff52;
+    cursor:pointer;
+}
+
+.cls-7 {
+    fill:#c8c80c;
+    cursor:pointer;
+}
+
+.cls-8 {
+    fill:#fdf909;
+    cursor:pointer;
+}
+
+.cls-9 {
+    fill:#0304fe;
+    cursor:pointer;
+}
+
+.cls-10 {
+    fill:#f2a405;
+    cursor:pointer;
+}
+
+.cls-11 {
+    fill:#320987;
+    cursor:pointer;
+}
+
+.cls-12 {
+    fill:#6bce6e;
+}
+
+.cls-13 {
+    fill:#676767;
+}
+
+.cls-14 {
+    fill:#48aaf7;
+}
+
+.cls-15 {
+    fill:#95fc95;
+}
+
+.cls-16{
+    fill:#ff00fe;
+}
+
+.cls-17 {
+    fill:#047e7f;
+}
+
+.cls-18 {
+    fill:#ff0201;
+}
+
+.cls-19 {
+    fill:#923896;
+}
+
+.cls-20 {
+    fill:#ff9895;
+}
+
+.cls-21 {
+    fill:#b2b3b3;
+}
+
+.cls-22 {
+    fill:#fad967;
+}
+
+.cls-23 {
+    fill:#c90cc8;
+}
+
+.cls-24 {
+    fill:#38c8fc;
+}
+
+.cls-25 {
+    fill:#4d52b4;
+}
+
+.map {
+    height:100vh;
+    width:100%;
+    display:grid;
+    place-items:center;
+    position:fixed;
+    top:0;
+    left:0;
+}
+
+body {
+    background-color: rgb(207, 236, 250);
+}
+
+header {
+    display: flex;
+    justify-content: flex-end;
+    padding: 30px;
+}
+
+.switch {
+    width: 80px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: rgb(39, 38, 38);
+    position: relative;
+}
+
+.flicker {
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    transition: 0.5s;
+    box-shadow:
+            inset 4px 4px 4px rgb(255, 255, 255),
+            inset -4px -4px 4px rgb(195 193 198 / 90%);
+}
+
+.dark {
+    background-color: rgb(50, 76, 90);
+    transition: 0.5s;
+}
+
+.moon {
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 0 0 rgb(255, 255, 255);
+    position: absolute;
+    top: 5px;
+    left: 45px;
+}
+
+.dark .flicker {
+    transform: translateX(40px);
+}
+
+.dark > * {
+    color: rgb(255, 255, 255);
+}
