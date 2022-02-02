@@ -62,58 +62,72 @@ html {
 
 .cls-12 {
     fill:#6bce6e;
+    cursor:pointer;
 }
 
 .cls-13 {
     fill:#676767;
+    cursor:pointer;
 }
 
 .cls-14 {
     fill:#48aaf7;
+    cursor:pointer;
 }
 
 .cls-15 {
     fill:#95fc95;
+    cursor:pointer;
 }
 
 .cls-16{
     fill:#ff00fe;
+    cursor:pointer;
 }
 
 .cls-17 {
     fill:#047e7f;
+    cursor:pointer;
 }
 
 .cls-18 {
     fill:#ff0201;
+    cursor:pointer;
 }
 
 .cls-19 {
     fill:#923896;
+    cursor:pointer;
 }
 
 .cls-20 {
     fill:#ff9895;
+    cursor:pointer;
 }
 
 .cls-21 {
     fill:#b2b3b3;
+    cursor:pointer;
 }
 
 .cls-22 {
     fill:#fad967;
+    cursor:pointer;
 }
 
 .cls-23 {
     fill:#c90cc8;
+    cursor:pointer;
 }
 
 .cls-24 {
     fill:#38c8fc;
+    cursor:pointer;
 }
 
 .cls-25 {
     fill:#4d52b4;
+    cursor:pointer;
 }
 
 .map {
@@ -159,7 +173,7 @@ header {
 }
 
 .dark {
-    background-color: rgb(50, 76, 90);
+    background-color: rgb(100, 146, 160);
     transition: 0.5s;
 }
 

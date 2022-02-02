@@ -46,6 +46,17 @@ climateArray[23] = document.querySelector('#EF');
 climateArray[24] = document.querySelector('#ET');
 climateArray[25] = document.querySelector('#Dwc');
 
+const landElement = document.querySelector('#Land');
+
+document.addEventListener('click', function (event) {
+    var isClickInsideElement = landElement.contains(event.target);
+    if (!isClickInsideElement) {
+        for (let i = 0; i < climateArray.length; i++) {
+            climateArray[i].style.opacity = '1';
+        }
+    }
+})
+
 for (let j = 0; j < climateArray.length; j++) {
     climateArray[j].addEventListener('click', () => {
         climateArray[j].style.opacity = '1';
