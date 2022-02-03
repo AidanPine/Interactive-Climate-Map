@@ -5,130 +5,33 @@ html {
 }
 
 
-.cls-1 {
-    fill:#69fe55;
-    cursor:pointer;
-}
-
-.cls-2 {
-    fill:#04fefe;
-    cursor:pointer;
-}
-
-.cls-3 {
-    fill:#a8affc;
-    cursor:pointer;
-}
-
-.cls-4 {
-    fill:#0378fe;
-    cursor:pointer;
-}
-
-.cls-5 {
-    fill:#024861;
-    cursor:pointer;
-}
-
-.cls-6 {
-    fill:#c7ff52;
-    cursor:pointer;
-}
-
-.cls-7 {
-    fill:#c8c80c;
-    cursor:pointer;
-}
-
-.cls-8 {
-    fill:#fdf909;
-    cursor:pointer;
-}
-
-.cls-9 {
-    fill:#0304fe;
-    cursor:pointer;
-}
-
-.cls-10 {
-    fill:#f2a405;
-    cursor:pointer;
-}
-
-.cls-11 {
-    fill:#320987;
-    cursor:pointer;
-}
-
-.cls-12 {
-    fill:#6bce6e;
-    cursor:pointer;
-}
-
-.cls-13 {
-    fill:#676767;
-    cursor:pointer;
-}
-
-.cls-14 {
-    fill:#48aaf7;
-    cursor:pointer;
-}
-
-.cls-15 {
-    fill:#95fc95;
-    cursor:pointer;
-}
-
-.cls-16{
-    fill:#ff00fe;
-    cursor:pointer;
-}
-
-.cls-17 {
-    fill:#047e7f;
-    cursor:pointer;
-}
-
-.cls-18 {
-    fill:#ff0201;
-    cursor:pointer;
-}
-
-.cls-19 {
-    fill:#923896;
-    cursor:pointer;
-}
-
-.cls-20 {
-    fill:#ff9895;
-    cursor:pointer;
-}
-
-.cls-21 {
-    fill:#b2b3b3;
-    cursor:pointer;
-}
-
-.cls-22 {
-    fill:#fad967;
-    cursor:pointer;
-}
-
-.cls-23 {
-    fill:#c90cc8;
-    cursor:pointer;
-}
-
-.cls-24 {
-    fill:#38c8fc;
-    cursor:pointer;
-}
-
-.cls-25 {
-    fill:#4d52b4;
-    cursor:pointer;
-}
+.cls-1{isolation:isolate;}
+.cls-2{mix-blend-mode:multiply;opacity:0.75;}
+.cls-3{fill:#4d52b4; cursor: pointer;}
+.cls-4{fill:#69fe55; cursor: pointer;}
+.cls-5{fill:#04fefe; cursor: pointer;}
+.cls-6{fill:#a8affc; cursor: pointer;}
+.cls-7{fill:#0378fe; cursor: pointer;}
+.cls-8{fill:#024861; cursor: pointer;}
+.cls-9{fill:#c7ff52; cursor: pointer;}
+.cls-10{fill:#c8c80c; cursor: pointer;}
+.cls-11{fill:#fdf909; cursor: pointer;}
+.cls-12{fill:#0304fe; cursor: pointer;}
+.cls-13{fill:#f2a405; cursor: pointer;}
+.cls-14{fill:#320987; cursor: pointer;}
+.cls-15{fill:#6bce6e; cursor: pointer;}
+.cls-16{fill:#676767; cursor: pointer;}
+.cls-17{fill:#48aaf7; cursor: pointer;}
+.cls-18{fill:#95fc95; cursor: pointer;}
+.cls-19{fill:#ff00fe; cursor: pointer;}
+.cls-20{fill:#047e7f; cursor: pointer;}
+.cls-21{fill:#ff0201; cursor: pointer;}
+.cls-22{fill:#923896; cursor: pointer;}
+.cls-23{fill:#ff9895; cursor: pointer;}
+.cls-24{fill:#b2b3b3; cursor: pointer;}
+.cls-25{fill:#fad967; cursor: pointer;}
+.cls-26{fill:#c90cc8; cursor: pointer;}
+.cls-27{fill:#38c8fc; cursor: pointer;}
 
 .map {
     height:100vh;
