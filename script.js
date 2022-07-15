@@ -1,24 +1,26 @@
-const switchElement = document.querySelector('.switch')
+//const switchElement = document.querySelector('.switch')
 
-switchElement.addEventListener('click', () => {
-    document.body.classList.toggle('dark');
-})
+//switchElement.addEventListener('click', () => {
+//    document.body.classList.toggle('dark');
+//})
+
+$('.panzoom a').on('mousedown touchstart', function( e ) {
+    e.stopImmediatePropagation();
+});
 
 const zoomElement = document.querySelector(".map");
-let zoom = 1;
-const ZOOM_SPEED = 0.3;
+const parent = zoomElement.parentElement;
+const panzoom = Panzoom(zoomElement, {
+    handleStartEvent: (event) => {
+        event.preventDefault()
+    },
+    minScale: 1,
+    maxScale: 12,
+    contain: 'outside'
+});
+zoomElement.addEventListener('wheel', panzoom.zoomWithWheel);
 
-document.addEventListener("wheel", function(e) {
-    if (e.deltaY < 0) {
-        zoomElement.style.transform = `scale(${zoom += ZOOM_SPEED})`;
-    }
-    else {
-        if (zoom > 1)
-            zoomElement.style.transform = `scale(${zoom -= ZOOM_SPEED})`;
-    }
-})
-
-var climateArray = [];
+const climateArray = [];
 climateArray[0] = document.querySelector('#Cfb');
 climateArray[1] = document.querySelector('#Af');
 climateArray[2] = document.querySelector('#Am');
@@ -46,23 +48,94 @@ climateArray[23] = document.querySelector('#EF');
 climateArray[24] = document.querySelector('#ET');
 climateArray[25] = document.querySelector('#Dwc');
 
+const defaultColors = [
+    '#69fe55',
+    '#0304fe',
+    '#0378fe',
+    '#48aaf7',
+    '#f2a405',
+    '#fad967',
+    '#ff0201',
+    '#ff9895',
+    '#c7ff52',
+    '#fdf909',
+    '#c8c80c',
+    '#95fc95',
+    '#6bce6e',
+    '#04fefe',
+    '#38c8fc',
+    '#047e7f',
+    '#024861',
+    '#ff00fe',
+    '#c90cc8',
+    '#923896',
+    '#a8affc',
+    '#0378fe',
+    '#320987',
+    '#676767',
+    '#b2b3b3',
+    '#4d52b4'
+];
+const altColors = [
+    '#394c33',
+    '#1c2250',
+    '#263250',
+    '#2f3c4f',
+    '#433a26',
+    '#474535',
+    '#422120',
+    '#45393c',
+    '#434c32',
+    '#494b2b',
+    '#3f4128',
+    '#3d4b3e',
+    '#354236',
+    '#364c51',
+    '#314250',
+    '#263338',
+    '#1f2832',
+    '#422550',
+    '#3a2741',
+    '#30263c',
+    '#393d50',
+    '#263250',
+    '#201e39',
+    '#2c2e33',
+    '#3b3d42',
+    '#272b42'
+];
+
+const selector = document.querySelector('#selected');
 const landElement = document.querySelector('#Land');
 
-document.addEventListener('click', function (event) {
-    var isClickInsideElement = landElement.contains(event.target);
-    if (!isClickInsideElement) {
-        for (let i = 0; i < climateArray.length; i++) {
-            climateArray[i].style.opacity = '1';
+const svg = document.querySelector('#climates')
+const delta = 6;
+
+let startX, startY;
+
+svg.addEventListener('pointerdown', function (event) {
+    startX = event.pageX;
+    startY = event.pageY;
+});
+
+svg.addEventListener('pointerup', function (event) {
+    const diffX = Math.abs(event.pageX - startX);
+    const diffY = Math.abs(event.pageY - startY);
+
+    if (diffX < delta && diffY < delta) {
+        for (let j = 0; j < climateArray.length; j++) {
+            if (event.target.parentElement.id === climateArray[j].id) {
+                climateArray[j].style.fill = defaultColors[j];
+                selector.innerHTML = climateArray[j].id;
+            }
+            else if (event.target.id === 'climates') {
+                selector.innerHTML = 'Interactive Climate Map';
+                climateArray[j].style.fill = defaultColors[j];
+            }
+            else {
+                climateArray[j].style.fill = altColors[j];
+            }
         }
     }
-})
+});
 
-for (let j = 0; j < climateArray.length; j++) {
-    climateArray[j].addEventListener('click', () => {
-        climateArray[j].style.opacity = '1';
-        for (let i = 0; i < climateArray.length; i++) {
-            if (i !== j)
-                climateArray[i].style.opacity = '0.2';
-        }
-    })
-}
